@@ -1,5 +1,5 @@
 body{
-    background:url('../assets/Background.png') no-repeat center center fixed;
+    background:url('../assets/Background.png') , url('../assets/Container.png') no-repeat center center fixed;
     background-size: cover;
     overflow: hidden;
     height: 100%;
