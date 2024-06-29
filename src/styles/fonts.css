@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/src/assets/Fonts/FKGroteskNeueTrial-Regular-BF6576818c3af74.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/src/assets/Fonts/FKGroteskNeueTrial-Bold-BF6576818bd3700.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/src/assets/Fonts/FKGroteskNeueTrial-Italic-BF6576818c041e2.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
