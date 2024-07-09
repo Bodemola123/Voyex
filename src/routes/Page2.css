@@ -149,6 +149,12 @@ p span{
 }
 .search-bar .search-icon{
     transform: translateX(16px);
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.search-bar .search-icon:hover{
+    cursor:pointer;
 }
 .buttons {
     display: flex;
@@ -240,6 +246,9 @@ p span{
     border: none;
     font-weight: 500;
     outline: none;
+}
+.lang:hover{
+    cursor: pointer;
 }
 .navmenu2 li a{
     text-align: center;
