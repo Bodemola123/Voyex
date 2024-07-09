@@ -3,6 +3,7 @@ body{
     background-size: cover;
     overflow: hidden;
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     border: 0;
@@ -233,7 +234,7 @@ p span{
     width: 125px;
     height: 20px;
     font-size: 16px;
-    margin-top: 43px;
+    margin-top: 45px;
     background: transparent;
     color: #FFFFFF;
     border: none;

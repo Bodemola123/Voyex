@@ -188,6 +188,7 @@ p span{
     color: #FFFFFF;
     border: none;
     outline: none;
+    margin-bottom: 5px;
 }
 .navmenu2 li a{
     text-align: center;

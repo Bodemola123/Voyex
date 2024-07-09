@@ -8,6 +8,10 @@ import './index.css'
 import './styles/fonts.css'; 
 import Root from '../src/routes/root'
 import Page2 from '../src/routes/Page2'
+import { I18nextProvider } from 'react-i18next';
+import './lang'
+
+
 
 const router = createBrowserRouter([
   {
@@ -23,6 +27,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+  <RouterProvider router={router} />
+
   </React.StrictMode>,
 )

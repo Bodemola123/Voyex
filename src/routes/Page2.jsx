@@ -13,25 +13,32 @@ import line1 from '../assets/Line1.png'
 import line2 from '../assets/Line2.png'
 import rocket1 from '../assets/Rocket1.png'
 import rocket2 from '../assets/Rocket2.png'
+import { useTranslation } from 'react-i18next';
+
 
 
 const Page2 = () => {
+  const {t, i18n} = useTranslation("global")
+
+  const changeLang =(lang) =>{
+    i18n.changeLanguage(lang)
+  }
   return (
     <div>
        <div className="container">
         <nav className='navbar'>
           <div className="navbar-left">
-            <span className="logo"><Link to={"/"}>Voyex.</Link></span>
+            <span className="logo"><Link to={"/"}>{t('Voyex.')}</Link></span>
           </div>
           <div className="navbar-center">
-        <a href="#" className="nav-link"><i className="fa fa-search"><img src={search} alt="" /></i> Search</a>
-        <a href="#" className="nav-link"><i className="fa fa-file"><img src={clipboard} alt="" /></i> Templates</a>
-        <a href="#" className="nav-link"><i className="fa fa-shopping-cart"><img src={shopping} alt="" /></i> GalactiMart</a>
-        <a href="#" className="nav-link"><i className="fa fa-briefcase"><img src={lock} alt="" /></i> Workspace</a>
+        <a href="#" className="nav-link"><i className="fa fa-search"><img src={search} alt="" /></i> {t('Search')}</a>
+        <a href="#" className="nav-link"><i className="fa fa-file"><img src={clipboard} alt="" /></i> {t('Templates')}</a>
+        <a href="#" className="nav-link"><i className="fa fa-shopping-cart"><img src={shopping} alt="" /></i> {t('GalactiMart')}</a>
+        <a href="#" className="nav-link"><i className="fa fa-briefcase"><img src={lock} alt="" /></i> {t('Workspace')}</a>
         </div>
         <div className="navbar-right">
-        <a href="#" className="sign-up">Sign Up</a>
-        <a href="#" className="log-in">Log in</a>
+        <a href="#" className="sign-up">{t('Sign Up')}</a>
+        <a href="#" className="log-in">{t('Log in')}</a>
       </div>
         </nav>
         <img src={line1} alt="" className="line1" />
@@ -41,36 +48,36 @@ const Page2 = () => {
         <img className="gemini" src={gemini} alt="" />
         <img className='gpt' src={gpt} alt="" />
         <img className='flag' src={flag} />
-        <h1>Voyex.</h1>
-        <p>Search for <span>anything</span></p>
+        <h1>{t("Voyex.")}</h1>
+        <p>{t("Search for")} <span>{t("anything")}</span></p>
         <div className="search-bar">
           <i className='search-icon'><img src={search2} alt="" /></i>
-          <input type="text" value= 'Start your search voyeux' className='search-input'/>
+          <input type="text" value= {t('Start your search voyeux')} className='search-input'/>
         </div>
         <div className="buttons">
         <div className="button-y">
           <button className='button-y1'>
-            <i><img src={fire} alt="" className='fire' /></i>Surprise ME!
+            <i><img src={fire} alt="" className='fire' /></i>{t("Surprise ME!")}
           </button>
           <button className='button-y2'>
-          <i><img src={fire} alt="" className='fire'/></i>Trending Searches
+          <i><img src={fire} alt="" className='fire'/></i>{t("Trending Searches")}
           </button>
         </div>
         <button className='button-x'>
-        <i><img src={fire} alt="" className='fire'/></i>Recently Added
+        <i><img src={fire} alt="" className='fire'/></i>{t("Recently Added")}
         </button>
         </div>
           <div className="navbar2">
           <ul className="navmenu2">
-            <li><a href="#">Buy Plan</a></li>
-            <li><a href="#">Advertise</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">About us</a></li>
+          <li><a href="#">{t('Buy Plan')}</a></li>
+            <li><a href="#">{t('Advertise')}</a></li>
+            <li><a href="#">{t('Resources')}</a></li>
+            <li><a href="#">{t('About us')}</a></li>
             <select name="" className='lang'>
-              <option value="">English(UK)</option>
-              <option value="">Spanish(ESP)</option>
-              <option value="">German(GER)</option>
-              <option value="">French(FRA)</option>
+            <option value="" onClick={() => changeLanguage('en')}>English(UK)</option>
+              <option value="" onClick={() => changeLanguage('es')}>Spanish(ESP)</option>
+              <option value="" onClick={() => changeLanguage('de')}>German(GER)</option>
+              <option value="" onClick={() => changeLanguage('fr')}>French(FRA)</option>
             </select>
           </ul>
         </div>
