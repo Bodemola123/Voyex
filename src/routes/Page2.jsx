@@ -14,15 +14,21 @@ import line2 from '../assets/Line2.png'
 import rocket1 from '../assets/Rocket1.png'
 import rocket2 from '../assets/Rocket2.png'
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 
 
 const Page2 = () => {
-  const {t, i18n} = useTranslation("global")
+  const {t, i18n} = useTranslation()
+  const [language, setLanguage] = useState(i18n.language)
 
-  const changeLang =(lang) =>{
+
+
+  const handleChangeLang =(lang) =>{
     i18n.changeLanguage(lang)
+    setLanguage(lang)
   }
+
   return (
     <div>
        <div className="container">
@@ -51,8 +57,8 @@ const Page2 = () => {
         <h1>{t("Voyex.")}</h1>
         <p>{t("Search for")} <span>{t("anything")}</span></p>
         <div className="search-bar">
-          <i className='search-icon'><img src={search2} alt="" /></i>
-          <input type="text" value= {t('Start your search voyeux')} className='search-input'/>
+          <button type='submit' className='search-icon'><img src={search2} alt="" /></button>
+          <input type="text" placeholder= {t('Start your search voyeux')} className='search-input'/>
         </div>
         <div className="buttons">
         <div className="button-y">
@@ -73,12 +79,10 @@ const Page2 = () => {
             <li><a href="#">{t('Advertise')}</a></li>
             <li><a href="#">{t('Resources')}</a></li>
             <li><a href="#">{t('About us')}</a></li>
-            <select name="" className='lang'>
-            <option value="" onClick={() => changeLanguage('en')}>English(UK)</option>
-              <option value="" onClick={() => changeLanguage('es')}>Spanish(ESP)</option>
-              <option value="" onClick={() => changeLanguage('de')}>German(GER)</option>
-              <option value="" onClick={() => changeLanguage('fr')}>French(FRA)</option>
-            </select>
+            <button className="lang" onClick={() => handleChangeLang('en')}>English(UK)</button>
+              <button className="lang" onClick={() => handleChangeLang('es')}>Spanish(ESP)</button>
+              <button className="lang" onClick={() => handleChangeLang('de')}>German(GER)</button>
+              <button className="lang" onClick={() => handleChangeLang('fr')}>French(FRA)</button>
           </ul>
         </div>
       </div>

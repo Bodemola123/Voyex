@@ -28,6 +28,19 @@ const root = () => {
     setLanguage(lang)
   }
 
+  const ButtonDropdown = () =>{
+    const [isOpen, setIsOpen]= useState(false)
+
+    const toggleDropdown =() =>{
+      setIsOpen(!isOpen)
+    }
+
+    const handleButtonClick =(option) =>{
+      console.log('You selected ${option}')
+      setIsOpen(false);
+    }
+  }
+
   return (
     <div>
       <header>
@@ -68,12 +81,10 @@ const root = () => {
             <li><a href="#">{t('Advertise')}</a></li>
             <li><a href="#">{t('Resources')}</a></li>
             <li><a href="#">{t('About us')}</a></li>
-            <select name="" className='lang'>
-              <option value="" ><button onClick={() => handleChangeLang('en')}>English(UK)</button></option>
-              <option value="" ><button onClick={() => handleChangeLang('es')}>Spanish(ESP)</button></option>
-              <option value="" ><button onClick={() => handleChangeLang('de')}>German(GER)</button></option>
-              <option value="" ><button onClick={() => handleChangeLang('fr')}>French(FRA)</button></option>
-            </select>
+              <button className="lang" onClick={() => handleChangeLang('en')}>English(UK)</button>
+              <button className="lang" onClick={() => handleChangeLang('es')}>Spanish(ESP)</button>
+              <button className="lang" onClick={() => handleChangeLang('de')}>German(GER)</button>
+              <button className="lang" onClick={() => handleChangeLang('fr')}>French(FRA)</button>
           </ul>
         </div>
           </footer>

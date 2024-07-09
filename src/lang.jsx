@@ -41,6 +41,42 @@ i18n.use(initReactI18next).init({
           "Trending Searches":"Búsquedas de tendencias",
           "Recently Added":"Recientemente"
         }
+      },
+      fr:{
+        translation:{
+          "Search":"Recherche",
+          "Templates":"Modèles",
+          "GalactiMart":"GalactiMart",
+          "Workspace":"Espace de travail",
+          "Search for":"Rechercher ",
+          "anything":"n'importe quoi",
+          "Start Your AI Journey":"Commencez votre voyage d'IA",
+          "Buy Plan":"Plan d'achat",
+          "Advertise":"Annonce",
+          "Resources":"Ressources",
+          "Start your search voyeux":"Démarrez votre recherche voyeux",
+          "Surprise ME!":"Surprenez-moi !",
+          "Trending Searches":"Recherches tendances",
+          "Recently Added":"Ajouté récemment"
+        }
+      },
+      de:{
+        translation:{
+          "Search":"Suche",
+          "Templates":"Vorlagen",
+          "GalactiMart":"GalactiMart",
+          "Workspace":"Arbeitsraum",
+          "Search for":"Suche nach ",
+          "anything":"alles",
+          "Start Your AI Journey":"Starten Sie Ihre AI-Reise",
+          "Buy Plan":"Kaufen Plan",
+          "Advertise":"Werbung",
+          "Resources":"Ressourcen",
+          "Start your search voyeux":"Starten Sie Ihre Suche",
+          "Surprise ME!":"Überraschung!",
+          "Trending Searches":"Auf den Wunschzettel",
+          "Recently Added":"Kürzlich hinzugefügt"
+        }
       }
     },
     lng:'en',
